@@ -4,8 +4,6 @@
 
 #define MAX_BOOKS 100
 
-
-
 typedef struct {
     int id;
     char title[100];
