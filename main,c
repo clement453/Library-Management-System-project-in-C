@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "backend.h"
+
+int main() {
+    int choice;
+
+    while (1) {
+        printf("\n=== Library Management System ===\n");
+        printf("1. Add Book\n");
+        printf("2. Display All Books\n");
+        printf("3. Search Book\n");
+        printf("4. Delete Book\n");
+        printf("5. Issue Book\n");
+        printf("6. Return Book\n");
+        printf("7. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                addBook();
+                break;
+            case 2:
+                displayBooks();
+                break;
+            case 3:
+                searchBook();
+                break;
+            case 4:
+                deleteBook();
+                break;
+            case 5:
+                issueBook();
+                break;
+            case 6:
+                returnBook();
+                break;
+            case 7:
+                printf("Exiting...\n");
+                exit(0);
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+    }
+
+    return 0;
+}
